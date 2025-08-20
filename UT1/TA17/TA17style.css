@@ -1,0 +1,27 @@
+body{
+margin:0;
+display:flex;
+justify-content: center;
+align-items: center;
+background: grey;
+}
+h2{
+    font-weight: bold;
+}
+
+.tarjeta{
+    width: 300px;
+    padding:20px;
+    text-align: center;
+    border-radius: 5%;
+    position:relative;
+    overflow: visible;
+    background:white;
+}
+.avatar{
+    position: relative;
+    top:0;
+    left:0;
+    margin-top: -10px;
+    margin-left: -10px;
+}
