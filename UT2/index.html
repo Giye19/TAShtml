@@ -1,8 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <script src="script.js"></script>
-    </head>
+    <head></head>
 
 
+
+<p id="textocambiador">Texto original</p>
+<button id="botoncambiador">Cambiar texto</button>
+<script>
+document.getElementById("botoncambiador").onclick = function() {
+    document.getElementById("textocambiador").innerText = "Texto cambiado";
+};
+</script>
+
+<u id="lista"></ul>
+
+<input type="text" id="input" placeholder="Nuevo elemento">
+<button id="botonAgregar">Añadir elemento</button>
+<button id="eliminarultimo">Eliminar ultimo elemento de la lista</button>
+
+
+<p id="textooculto">Ahora no estoy oculto</p>
+<button id="botonmostrarocultar">Mostrar/Ocultar</button>
+
+
+<p id="contador">0</p>
+<button id="incrementador">Incrementar</button>
+
+<input type="text" id="buscador" placeholder="Buscar...">
+<ul id="lista2"></ul>
+
+
+
+<script src="script.js"></script>
 </html>

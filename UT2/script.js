@@ -1,4 +1,8 @@
 
+
+
+
+
 function repeatString(texto, repeticiones)
 {
     for (let i =0; i<repeticiones; i++)
@@ -33,10 +37,10 @@ function sumAll(a,b)
     console.log(suma);
 }
 
-function leapYears(año)
+function leapYears(anio)
 {
     let esBisiesto = false;
-    if ((año % 4 === 0) || (año % 100 === 0) && (año % 400 === 0))
+    if ((anio % 4 === 0) || (anio % 100 === 0) && (anio % 400 === 0))
     {
         esBisiesto = true;
     }
@@ -115,3 +119,115 @@ function duplicates(nums)
     console.log(duplicates.length);
     return duplicates.length;
 }
+
+function generatePassword(length)
+{
+    let mayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let minusculas = "abcdefghijklmnopqrstuvwxyz";
+    let numeros = "0123456789";
+    let simbolos = "!@#$%^&*()_+[]{}|;:,.<>?";
+    let contrasenia = "";
+    if (length < 8)
+    {
+        console.log("La contraseña debe tener al menos 8 caracteres");
+        return;
+    }
+    else{
+            for (let i=0; i<length; i++)
+    {
+        let tipo = Math.floor(Math.random() * 4);
+        if (tipo === 0)
+        {
+            contrasenia += mayusculas.charAt(Math.floor(Math.random() * mayusculas.length));
+        }
+        else if (tipo === 1)
+        {
+            contrasenia += minusculas.charAt(Math.floor(Math.random() * minusculas.length));
+        }
+        else if (tipo === 2)
+        {
+            contrasenia += numeros.charAt(Math.floor(Math.random() * numeros.length));
+        }
+        else
+        {
+            contrasenia += simbolos.charAt(Math.floor(Math.random() * simbolos.length));
+        }
+    }
+    console.log(contrasenia);
+    return contrasenia;
+    }
+}
+
+    const boton = document.getElementById("botonAgregar");
+    const lista = document.getElementById("lista");
+    const input = document.getElementById("input");
+
+    boton.addEventListener("click", function() {
+        const texto = input.value.trim(); 
+        const nuevoElemento = document.createElement("li"); 
+        nuevoElemento.textContent = texto;
+        lista.appendChild(nuevoElemento);  
+        input.value = "";
+    }
+    );
+
+
+    const botonEliminar = document.getElementById("eliminarultimo");
+    botonEliminar.addEventListener("click", function() {
+        const elementos = lista.getElementsByTagName("li");
+        if (elementos.length > 0) {
+            lista.removeChild(elementos[elementos.length - 1]);
+        }
+    });
+
+    const textoOculto = document.getElementById("textooculto");
+    const botonMostrarOcultar = document.getElementById("botonmostrarocultar");
+    botonMostrarOcultar.addEventListener("click", function() {
+        if (textoOculto.style.display === "none") {
+            textoOculto.style.display = "block";
+            botonMostrarOcultar.textContent = "Ocultar Texto";
+        } else {
+            textoOculto.style.display = "none";
+            botonMostrarOcultar.textContent = "Mostrar Texto";
+        }
+    });
+
+
+    const contador = document.getElementById("contador");
+    const incrementador = document.getElementById("incrementador");
+    incrementador.addEventListener("click", function() {
+        let contadoractual = parseInt(contador.textContent);
+        contadoractual++;
+        contador.textContent = contadoractual;
+    });
+
+
+
+
+
+    const personas = ["Guillermo", "Nicolas", "Natanael", "Bruno", "Joaquin", "Victoria", "Juan", "Sofía"];
+    const lista2 = document.getElementById("lista2");
+    const buscador = document.getElementById("buscador");
+
+    function renderizarLista(items) {
+        lista2.innerHTML = ""; 
+        items.forEach(persona => {
+            const li = document.createElement("li");
+            li.textContent = persona;
+            lista2.appendChild(li);
+        });
+    }
+    renderizarLista(personas);
+
+    buscador.addEventListener("input", () => {
+        const texto = buscador.value.toLowerCase();
+        const elementoslista2 = lista2.getElementsByTagName("li");
+        for (let li of elementoslista2) {
+            if (li.textContent.toLowerCase().includes(texto)) {
+                li.style.display = "list-item";
+            } else {
+                li.style.display = "none";
+            }
+        }
+    });
+
