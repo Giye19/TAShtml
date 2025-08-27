@@ -1,6 +1,8 @@
 
 
-
+/*EJERCICIOS DEL 1 AL 18 EN ESTE ARCHIVO*/
+/*EJERCICIOS DEL 1 AL 18 EN ESTE ARCHIVO*/
+/*EJERCICIOS DEL 1 AL 18 EN ESTE ARCHIVO*/
 
 
 function repeatString(texto, repeticiones)
@@ -231,3 +233,6 @@ function generatePassword(length)
         }
     });
 
+/*EJERCICIOS DEL 1 AL 18 EN ESTE ARCHIVO*/
+/*EJERCICIOS DEL 1 AL 18 EN ESTE ARCHIVO*/
+/*EJERCICIOS DEL 1 AL 18 EN ESTE ARCHIVO*/
