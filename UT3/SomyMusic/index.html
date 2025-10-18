@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Álbumes</title>
+</head>
+<body>
+  <h1>Lista de Álbumes</h1>
+  <div id="albums-container"></div>
+
+  <!-- Modal para mostrar info de canciones -->
+  <div id="modal" style="display:none; position:fixed; top:20%; left:50%; transform:translateX(-50%);
+       background:#fff; padding:20px; border:1px solid #ccc;">
+    <h2 id="song-name"></h2>
+    <p><strong>Artista:</strong> <span id="song-artist"></span></p>
+    <p><strong>Duración:</strong> <span id="song-duration"></span></p>
+    <p><strong>Género:</strong> <span id="song-genre"></span></p>
+    <button id="close-modal">Cerrar</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

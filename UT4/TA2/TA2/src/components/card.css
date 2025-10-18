@@ -1,0 +1,12 @@
+
+.card{
+    border-radius:25px;
+    background-color: bisque;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100000;
+    color: brown;
+    margin:20px;
+}
