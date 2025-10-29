@@ -5,15 +5,11 @@
   text-align: center;
 }
 
-
-body{
-  display:flex;
-  flex-direction: row;
-  align-items: center;
+button
+{
+  height: 50px;
+  width: 150px;
 }
-
-
-
 
 .logo {
   height: 6em;

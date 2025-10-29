@@ -5,6 +5,18 @@
   text-align: center;
 }
 
+button {
+  margin: 3px;
+}
+
+.mas {
+  background-color: green;
+}
+
+.menos {
+  background-color: red;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
